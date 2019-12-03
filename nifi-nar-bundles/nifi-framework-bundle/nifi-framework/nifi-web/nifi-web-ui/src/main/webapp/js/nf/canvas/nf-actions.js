@@ -818,6 +818,17 @@
             }
         },
 
+
+        /**
+         * Shows the MATLAB dialog for the specified selection.
+         *
+         * @param {selection} selection     Selection of the component to be configured
+         */
+        showMATLAB: function (selection) {
+            console.log(selection);
+            window.location.href = "matlab:magic(5)";
+        },
+
         /**
          * Opens the policy management page for the selected component.
          *

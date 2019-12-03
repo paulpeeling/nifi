@@ -55,7 +55,7 @@
     // default dimensions for each type of component
     var dimensions = {
         width: 350,
-        height: 130
+        height: 70,
     };
 
     // ---------------------------------
@@ -249,252 +249,6 @@
                             'width': 230,
                             'height': 12
                         });
-
-                    // -----
-                    // stats
-                    // -----
-
-                    // draw the processor statistics table
-
-                    // in
-                    details.append('rect')
-                        .attr({
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
-                            'height': 19,
-                            'x': 0,
-                            'y': 50,
-                            'fill': '#f4f6f7'
-                        });
-
-                    // border
-                    details.append('rect')
-                        .attr({
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
-                            'height': 1,
-                            'x': 0,
-                            'y': 68,
-                            'fill': '#c7d2d7'
-                        });
-
-                    // read/write
-                    details.append('rect')
-                        .attr({
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
-                            'height': 19,
-                            'x': 0,
-                            'y': 69,
-                            'fill': '#ffffff'
-                        });
-
-                    // border
-                    details.append('rect')
-                        .attr({
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
-                            'height': 1,
-                            'x': 0,
-                            'y': 87,
-                            'fill': '#c7d2d7'
-                        });
-
-                    // out
-                    details.append('rect')
-                        .attr({
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
-                            'height': 20,
-                            'x': 0,
-                            'y': 88,
-                            'fill': '#f4f6f7'
-                        });
-
-                    // border
-                    details.append('rect')
-                        .attr({
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
-                            'height': 1,
-                            'x': 0,
-                            'y': 106,
-                            'fill': '#c7d2d7'
-                        });
-
-                    // tasks/time
-                    details.append('rect')
-                        .attr({
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
-                            'height': 19,
-                            'x': 0,
-                            'y': 107,
-                            'fill': '#ffffff'
-                        });
-
-                    // stats label container
-                    var processorStatsLabel = details.append('g')
-                        .attr({
-                            'transform': 'translate(10, 55)'
-                        });
-
-                    // in label
-                    processorStatsLabel.append('text')
-                        .attr({
-                            'width': 73,
-                            'height': 10,
-                            'y': 9,
-                            'class': 'stats-label'
-                        })
-                        .text('In');
-
-                    // read/write label
-                    processorStatsLabel.append('text')
-                        .attr({
-                            'width': 73,
-                            'height': 10,
-                            'y': 27,
-                            'class': 'stats-label'
-                        })
-                        .text('Read/Write');
-
-                    // out label
-                    processorStatsLabel.append('text')
-                        .attr({
-                            'width': 73,
-                            'height': 10,
-                            'y': 46,
-                            'class': 'stats-label'
-                        })
-                        .text('Out');
-
-                    // tasks/time label
-                    processorStatsLabel.append('text')
-                        .attr({
-                            'width': 73,
-                            'height': 10,
-                            'y': 65,
-                            'class': 'stats-label'
-                        })
-                        .text('Tasks/Time');
-
-                    // stats value container
-                    var processorStatsValue = details.append('g')
-                        .attr({
-                            'transform': 'translate(85, 55)'
-                        });
-
-                    // in value
-                    var inText = processorStatsValue.append('text')
-                        .attr({
-                            'width': 180,
-                            'height': 9,
-                            'y': 9,
-                            'class': 'processor-in stats-value'
-                        });
-
-                    // in count
-                    inText.append('tspan')
-                        .attr({
-                            'class': 'count'
-                        });
-
-                    // in size
-                    inText.append('tspan')
-                        .attr({
-                            'class': 'size'
-                        });
-
-                    // read/write value
-                    processorStatsValue.append('text')
-                        .attr({
-                            'width': 180,
-                            'height': 10,
-                            'y': 27,
-                            'class': 'processor-read-write stats-value'
-                        });
-
-                    // out value
-                    var outText = processorStatsValue.append('text')
-                        .attr({
-                            'width': 180,
-                            'height': 10,
-                            'y': 46,
-                            'class': 'processor-out stats-value'
-                        });
-
-                    // out count
-                    outText.append('tspan')
-                        .attr({
-                            'class': 'count'
-                        });
-
-                    // out size
-                    outText.append('tspan')
-                        .attr({
-                            'class': 'size'
-                        });
-
-                    // tasks/time value
-                    processorStatsValue.append('text')
-                        .attr({
-                            'width': 180,
-                            'height': 10,
-                            'y': 65,
-                            'class': 'processor-tasks-time stats-value'
-                        });
-
-                    // stats value container
-                    var processorStatsInfo = details.append('g')
-                        .attr('transform', 'translate(305, 55)');
-
-                    // in info
-                    processorStatsInfo.append('text')
-                        .attr({
-                            'width': 25,
-                            'height': 10,
-                            'y': 9,
-                            'class': 'stats-info'
-                        })
-                        .text('5 min');
-
-                    // read/write info
-                    processorStatsInfo.append('text')
-                        .attr({
-                            'width': 25,
-                            'height': 10,
-                            'y': 27,
-                            'class': 'stats-info'
-                        })
-                        .text('5 min');
-
-                    // out info
-                    processorStatsInfo.append('text')
-                        .attr({
-                            'width': 25,
-                            'height': 10,
-                            'y': 46,
-                            'class': 'stats-info'
-                        })
-                        .text('5 min');
-
-                    // tasks/time info
-                    processorStatsInfo.append('text')
-                        .attr({
-                            'width': 25,
-                            'height': 10,
-                            'y': 65,
-                            'class': 'stats-info'
-                        })
-                        .text('5 min');
 
                     // -------------------
                     // active thread count
@@ -784,6 +538,7 @@
                 }
             });
 
+        /*
         // in count value
         updated.select('text.processor-in tspan.count')
             .text(function (d) {
@@ -797,10 +552,11 @@
             });
 
         // read/write value
+        
         updated.select('text.processor-read-write')
             .text(function (d) {
                 return d.status.aggregateSnapshot.read + ' / ' + d.status.aggregateSnapshot.written;
-            });
+            });        
 
         // out count value
         updated.select('text.processor-out tspan.count')
@@ -819,6 +575,7 @@
             .text(function (d) {
                 return d.status.aggregateSnapshot.tasks + ' / ' + d.status.aggregateSnapshot.tasksDuration;
             });
+        */
 
         updated.each(function (d) {
             var processor = d3.select(this);

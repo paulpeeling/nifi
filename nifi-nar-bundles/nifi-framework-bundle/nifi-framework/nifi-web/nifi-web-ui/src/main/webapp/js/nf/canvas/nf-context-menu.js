@@ -536,6 +536,7 @@
         {id: 'leave-group-menu-item', condition: isNotRootGroup, menuItem: {clazz: 'fa fa-level-up', text: 'Leave group', action: 'leaveGroup'}},
         {separator: true},
         {id: 'show-configuration-menu-item', condition: isConfigurable, menuItem: {clazz: 'fa fa-gear', text: 'Configure', action: 'showConfiguration'}},
+        {id: 'show-matlab-menu-item', condition: isConfigurable, menuItem: {clazz: 'fa fa-gear', text: 'MATLAB', action: 'showMATLAB'}},
         {id: 'show-details-menu-item', condition: hasDetails, menuItem: {clazz: 'fa fa-gear', text: 'View configuration', action: 'showDetails'}},
         {separator: true},
         {id: 'enter-group-menu-item', condition: isProcessGroup, menuItem: {clazz: 'fa fa-sign-in', text: 'Enter group', action: 'enterGroup'}},

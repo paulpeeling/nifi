@@ -79,6 +79,16 @@
             -->
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty.version}</version>
+                <configuration>
+                    <httpConnector>
+                        <port>9999</port>
+                    </httpConnector>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-jspc-maven-plugin</artifactId>
                 <version>${jetty.version}</version>
                 <executions>
@@ -388,7 +398,7 @@
         <profile>
             <id>minify-and-compress</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <canvas.filter>canvas-min.properties</canvas.filter>
